@@ -39,7 +39,7 @@ class CertificatesMatchClient
         $data = $this->serializer->normalize($certificatesMatch);
 
         $result = $this->apiRestClient->get(
-            $this->uri.UniversignClientInterface::VERSION.UniversignClientInterface::URI_CERTIFICATE_MATCH,
+            $this->uri.'/'.UniversignClientInterface::VERSION.UniversignClientInterface::URI_CERTIFICATE_MATCH,
             $data
         );
 

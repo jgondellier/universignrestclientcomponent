@@ -2,7 +2,6 @@
 
 namespace Universign\Rest\ClientComponent\Client;
 
-
 use GuzzleHttp\Client;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -44,6 +43,10 @@ class ApiRestClient
             'Request' => $params
 
         ]);
+
+        $token = '';
+
+        $params['headers']['Authorization'] = 'Bearer '.$token;
 
         try {
             $data = $this->client->request($httpMethod, $uri, $params);

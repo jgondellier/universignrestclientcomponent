@@ -1,5 +1,5 @@
 {
-  "name": "universign/rest-client-component",
+  "name": "jgondellier/rest-client-component",
   "description": "L'Universign Rest Client Component est responsable de la communication avec Universign",
   "type": "library",
   "license": "MIT",

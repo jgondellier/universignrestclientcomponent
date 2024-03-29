@@ -23,11 +23,17 @@ class ApiRestClient
         $this->logger = $logger ?? DefaultLoggerFactory::getInstance();
     }
 
+    /**
+     * @throws UniversignException
+     */
     public function get(string $uri, array $params = []): array
     {
         return $this->query(Request::METHOD_GET, $uri, $params);
     }
 
+    /**
+     * @throws UniversignException
+     */
     public function post(string $uri, array $params = []): array
     {
         return $this->query(Request::METHOD_POST, $uri, $params);

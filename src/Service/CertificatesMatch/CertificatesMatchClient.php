@@ -13,7 +13,7 @@ use Universign\Rest\ClientComponent\Model\certificatesMatchResponse;
 use Universign\Rest\ClientComponent\Service\UniversignClient;
 use Universign\Rest\ClientComponent\Service\UniversignClientInterface;
 
-class CertificatesMatchClient
+class CertificatesMatchClient implements CertificatesMatchClientInterface
 {
     private ApiRestClient $apiRestClient;
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace Universign\Rest\ClientComponent\Service;
+namespace UniversignRest\ClientComponent\Service;
 
 use Psr\Log\LoggerInterface;
-use Universign\Rest\ClientComponent\Exception\WrongParametersException;
-use Universign\Rest\ClientComponent\Model\certificatesMatch;
-use Universign\Rest\ClientComponent\Service\CertificatesMatch\CertificatesMatchClient;
-use Universign\Rest\ClientComponent\Service\UniversignClientInterface;
-use Universign\Rest\ClientComponent\Model\certificatesMatchResponse;
+use UniversignRest\ClientComponent\Exception\WrongParametersException;
+use UniversignRest\ClientComponent\Model\certificatesMatch;
+use UniversignRest\ClientComponent\Service\CertificatesMatch\CertificatesMatchClient;
+use UniversignRest\ClientComponent\Service\UniversignClientInterface;
+use UniversignRest\ClientComponent\Model\certificatesMatchResponse;
 
 class UniversignClient implements UniversignClientInterface
 {

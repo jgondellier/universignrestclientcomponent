@@ -1,9 +1,9 @@
 <?php
 
-namespace Universign\Rest\ClientComponent\Service;
+namespace UniversignRest\ClientComponent\Service;
 
-use Universign\Rest\ClientComponent\Model\certificatesMatch;
-use Universign\Rest\ClientComponent\Model\certificatesMatchResponse;
+use UniversignRest\ClientComponent\Model\certificatesMatch;
+use UniversignRest\ClientComponent\Model\certificatesMatchResponse;
 
 interface UniversignClientInterface
 {

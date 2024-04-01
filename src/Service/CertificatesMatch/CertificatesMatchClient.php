@@ -1,17 +1,18 @@
 <?php
 
-namespace Universign\Rest\ClientComponent\Service\CertificatesMatch;
+namespace UniversignRest\ClientComponent\Service\CertificatesMatch;
 
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
-use Universign\Rest\ClientComponent\Exception\WrongParametersException;
-use Universign\Rest\ClientComponent\Logger\DefaultLoggerFactory;
-use Universign\Rest\ClientComponent\Client\ApiRestClient;
-use Universign\Rest\ClientComponent\Model\certificatesMatch;
-use Universign\Rest\ClientComponent\Model\certificatesMatchResponse;
-use Universign\Rest\ClientComponent\Service\UniversignClient;
-use Universign\Rest\ClientComponent\Service\UniversignClientInterface;
+use UniversignRest\ClientComponent\Exception\UniversignException;
+use UniversignRest\ClientComponent\Exception\WrongParametersException;
+use UniversignRest\ClientComponent\Logger\DefaultLoggerFactory;
+use UniversignRest\ClientComponent\Client\ApiRestClient;
+use UniversignRest\ClientComponent\Model\certificatesMatch;
+use UniversignRest\ClientComponent\Model\certificatesMatchResponse;
+use UniversignRest\ClientComponent\Service\UniversignClient;
+use UniversignRest\ClientComponent\Service\UniversignClientInterface;
 
 class CertificatesMatchClient implements CertificatesMatchClientInterface
 {
@@ -32,7 +33,7 @@ class CertificatesMatchClient implements CertificatesMatchClientInterface
     }
 
     /**
-     * @throws WrongParametersException
+     * @throws WrongParametersException|UniversignException
      */
     public function certificatesMatch(certificatesMatch $certificatesMatch):certificatesMatchResponse
     {

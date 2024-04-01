@@ -1,6 +1,6 @@
 <?php
 
-namespace Universign\Rest\ClientComponent\Logger;
+namespace UniversignRest\ClientComponent\Logger;
 
 use Monolog\Handler\FirePHPHandler;
 use Monolog\Handler\StreamHandler;

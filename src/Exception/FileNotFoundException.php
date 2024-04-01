@@ -1,6 +1,6 @@
 <?php
 
-namespace Universign\Rest\ClientComponent\Exception;
+namespace UniversignRest\ClientComponent\Exception;
 
 class FileNotFoundException extends \Exception
 {

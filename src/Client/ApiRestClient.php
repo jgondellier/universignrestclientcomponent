@@ -1,12 +1,12 @@
 <?php
 
-namespace Universign\Rest\ClientComponent\Client;
+namespace UniversignRest\ClientComponent\Client;
 
 use GuzzleHttp\Client;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\Request;
-use Universign\Rest\ClientComponent\Exception\UniversignException;
-use Universign\Rest\ClientComponent\Logger\DefaultLoggerFactory;
+use UniversignRest\ClientComponent\Exception\UniversignException;
+use UniversignRest\ClientComponent\Logger\DefaultLoggerFactory;
 
 class ApiRestClient
 {

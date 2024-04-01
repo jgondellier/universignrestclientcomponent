@@ -1,6 +1,6 @@
 <?php
 
-namespace Universign\Rest\ClientComponent\Model;
+namespace UniversignRest\ClientComponent\Model;
 
 class certificatesMatch
 {

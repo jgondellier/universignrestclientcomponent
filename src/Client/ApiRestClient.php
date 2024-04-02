@@ -11,15 +11,17 @@ use UniversignRest\ClientComponent\Logger\DefaultLoggerFactory;
 class ApiRestClient
 {
     private Client $client;
+    private string $token;
     private LoggerInterface $logger;
 
-    public function __construct(LoggerInterface $logger = null)
+    public function __construct(string $uri, string $token, LoggerInterface $logger = null)
     {
         $this->client = new Client([
-            'base_uri'  => '',
+            'base_uri'  => $uri,
             'timeout'   => 120,
             'verify'    => false,
         ]);
+        $this->token = $token;
         $this->logger = $logger ?? DefaultLoggerFactory::getInstance();
     }
 
@@ -36,6 +38,8 @@ class ApiRestClient
      */
     public function post(string $uri, array $params = []): array
     {
+        $params['headers']['Content-Type'] = 'multipart/form-data';
+
         return $this->query(Request::METHOD_POST, $uri, $params);
     }
 
@@ -50,9 +54,7 @@ class ApiRestClient
 
         ]);
 
-        $token = '';
-
-        $params['headers']['Authorization'] = 'Bearer '.$token;
+        $params['headers']['Authorization'] = 'Bearer '.$this->token;
 
         try {
             $data = $this->client->request($httpMethod, $uri, $params);

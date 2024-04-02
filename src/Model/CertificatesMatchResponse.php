@@ -2,7 +2,7 @@
 
 namespace UniversignRest\ClientComponent\Model;
 
-class certificatesMatchResponse
+class CertificatesMatchResponse
 {
     private bool $matchFound;
 
